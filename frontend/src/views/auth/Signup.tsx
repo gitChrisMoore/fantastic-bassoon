@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { useAuthContext } from "../../contexts/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
+import { Button } from "../../components/ui/button";
+
 type FormData = {
   email: string;
   password: string;
@@ -38,6 +40,8 @@ const Signup: React.FC = () => {
         <br />
         <button type="submit">Sign Up</button>
       </form>
+      <Button variant="outline">Button</Button>
+      <Button>Button</Button>
     </div>
   );
 };
