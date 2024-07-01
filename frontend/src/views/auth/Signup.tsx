@@ -17,6 +17,7 @@ import {
   FormMessage,
 } from "@components/ui/form";
 import { Input } from "@components/ui/input";
+import PageTitle from "@/utils/pageTitle";
 
 const Signup: React.FC = () => {
   const { signUp } = useAuthContext();
@@ -42,7 +43,7 @@ const Signup: React.FC = () => {
 
   return (
     <div>
-      <h1>Signup</h1>
+      <PageTitle text="Create Account" />
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -75,7 +76,12 @@ const Signup: React.FC = () => {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <div className="flex justify-between">
+            <Button type="submit">Sign Up</Button>
+            <Button variant="outline" onClick={() => navigate("/auth-signin")}>
+              Already have an account? Sign In
+            </Button>
+          </div>
         </form>
       </Form>
     </div>

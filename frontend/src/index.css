@@ -1,6 +1,18 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  @apply h-full m-0 bg-slate-100;
+  /* Use Tailwind's slate color */
+}
+
+body {
+  overflow: hidden;
+  /* Prevent body scroll */
+}
 
   @layer base {
     :root {

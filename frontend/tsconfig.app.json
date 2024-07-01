@@ -5,7 +5,8 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    // "module": "ESNext",
+    "module": "ES2022",
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -26,9 +27,11 @@
     /* */
     "baseUrl": "./src/",
     "paths": {
-      "@components/*": ["./components/*"]
-    }
-        
+      "@components/*": ["./components/*"],
+      "@/*": ["./*"]
+    },
+
+
 
   },
   "include": ["src"]

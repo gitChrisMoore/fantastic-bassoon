@@ -1,28 +1,15 @@
 import Router from "./router";
+import Header from "./views/header/TopNavBar";
 
 function App() {
   return (
     <>
-      <main className="bg-slate-100">
-        <Router />
-        <div>
-          <a href="https://vitejs.dev" target="_blank">
-            asdasd
-          </a>
-          <a href="https://react.dev" target="_blank">
-            asdasd
-          </a>
+      <Header />
+
+      <main className="h-full flex justify-center">
+        <div className="max-w-md w-full mx-4 flex-grow overflow-y-auto p-4">
+          <Router />
         </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button>count is</button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
       </main>
     </>
   );

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // import { Button } from "@/components/ui/button";
 import { Button } from "@components/ui/button";
+import PageTitle from "@/utils/pageTitle";
 
 const AccountManagement = () => {
   const navigate = useNavigate();
@@ -22,7 +23,11 @@ const AccountManagement = () => {
 
   return (
     <div>
-      <h1>Account Management</h1>
+      <PageTitle text="Account Management" />
+      <p className="leading-7 [&:not(:first-child)]:mt-6">
+        The king, seeing how much happier his subjects were, realized the error
+        of his ways and repealed the joke tax.
+      </p>
       {session && (
         <div>
           <h2>Session Information</h2>
