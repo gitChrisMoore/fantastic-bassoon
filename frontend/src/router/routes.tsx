@@ -9,6 +9,7 @@ import AccountManagement from "../views/auth/AccountManagement/AccountManagement
 
 // Dashboard
 import LandingPage from "../views/dashboard/LandingPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 export const routes = [
   ,
@@ -32,7 +33,11 @@ export const routes = [
   },
   {
     id: "auth-account-management",
-    component: <AccountManagement />,
+    component: (
+      <ProtectedRoute>
+        <AccountManagement />
+      </ProtectedRoute>
+    ),
     path: "/auth-account-management",
   },
   //
@@ -40,7 +45,11 @@ export const routes = [
   //
   {
     id: "dashboard-landing-page",
-    component: <LandingPage />,
+    component: (
+      <ProtectedRoute>
+        <LandingPage />
+      </ProtectedRoute>
+    ),
     path: "/dashboard-landing-page",
   },
 ];

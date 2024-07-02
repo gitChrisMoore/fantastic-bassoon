@@ -1,9 +1,7 @@
-import { useNavigate, Link } from "react-router-dom";
 import ProfileAvatar from "./ProfileAvatar";
 import NavMenu from "./NavMenu";
 
 const TopNavBar = () => {
-  const navigate = useNavigate();
   // const { signOut, session } = useAuthContext();
   return (
     <header className="sticky top-0 z-50 h-14 w-full border-b">
@@ -13,7 +11,7 @@ const TopNavBar = () => {
             <NavMenu />
           </div>
           <div className="flex-1 items-center h-full flex">
-            <p>Memorable.ai</p>
+            <p>Memor.ai</p>
           </div>
           <div className="flex ">
             <ProfileAvatar />
